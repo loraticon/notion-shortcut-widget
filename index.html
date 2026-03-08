@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노션 단축키 치트시트</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Pretendard', 'sans-serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Pretendard', sans-serif; }
+        /* 스크롤바 커스텀 (노션 스타일) */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        .dark ::-webkit-scrollbar-thumb { background: #4b5563; }
+        ::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+        
+        .kbd-key {
+            box-shadow: 0 2px 0 0 rgba(0,0,0,0.1);
+        }
+        .dark .kbd-key {
+            box-shadow: 0 2px 0 0 rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 p-4 transition-colors duration-200 min-h-screen flex justify-center items-start">
+
+    <div class="max-w-2xl w-full bg-white dark:bg-[#191919] rounded-2xl shadow-sm border border-gray-200 dark:border-gray-800 overflow-hidden">
+        
+        <!-- Header -->
+        <div class="p-6 border-b border-gray-100 dark:border-gray-800 flex justify-between items-center bg-white dark:bg-[#202020] sticky top-0 z-10">
+            <div>
+                <h1 class="text-xl font-bold flex items-center gap-2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png" alt="Notion Logo" class="w-6 h-6 rounded">
+                    노션 단축키 치트시트
+                </h1>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mt-1">작업 효율을 극대화하는 필수 단축키 모음</p>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors tooltip" title="다크/라이트 모드 전환 (Ctrl+Shift+L)">
+                <i data-lucide="moon" class="w-5 h-5 dark:hidden text-gray-600"></i>
+                <i data-lucide="sun" class="w-5 h-5 hidden dark:block text-gray-300"></i>
+            </button>
+        </div>
+
+        <div class="p-6 space-y-8 h-[calc(100vh-140px)] sm:h-auto overflow-y-auto">
+            
+            <!-- Section 1 -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i data-lucide="pen-line" class="w-4 h-4"></i>
+                    1. 텍스트 서식 단축키
+                </h2>
+                <div class="space-y-2">
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">굵게 (Bold)</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">B</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">기울임 (Italic)</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">I</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">밑줄 (Underline)</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">U</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">취소선 (Strikethrough)</span>
+                        <div class="flex gap-1.5 flex-wrap justify-end">
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Shift</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">S</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">인라인 코드 (Code)</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">E</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
+                        <span class="font-medium group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">웹 링크 추가</span>
+                        <div class="flex gap-1.5 items-center">
+                            <span class="text-sm text-gray-500 dark:text-gray-400">텍스트 드래그 후</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono ml-1">Ctrl/Cmd</kbd>
+                            <span class="text-gray-400 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md text-sm font-mono">K</kbd>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2 -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                    2. 마법의 마크다운 블록
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">체크박스 (To-do)</div>
+                        <div class="flex items-center gap-2">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">[]</kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">글머리 기호 (Bullet)</div>
+                        <div class="flex items-center gap-2">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">-</kbd>
+                            <span class="text-sm text-gray-400">또는</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">*</kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">번호 매기기 (Number)</div>
+                        <div class="flex items-center gap-2">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">1.</kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">토글 목록 (Toggle)</div>
+                        <div class="flex items-center gap-2">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">></kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">인용구 (Quote)</div>
+                        <div class="flex items-center gap-2">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">"</kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="p-4 border border-gray-100 dark:border-gray-800 rounded-xl hover:border-blue-200 dark:hover:border-blue-900 bg-gray-50/50 dark:bg-gray-800/20 transition-colors">
+                        <div class="text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">제목 1, 2, 3 (Heading)</div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">#</kbd>
+                            <span class="text-sm text-gray-400">,</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">##</kbd>
+                            <span class="text-sm text-gray-400">,</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-sm font-mono text-blue-600 dark:text-blue-400">###</kbd>
+                            <span class="text-sm text-gray-500">+ 스페이스바</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3 -->
+            <section>
+                <h2 class="text-sm font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-4 flex items-center gap-2">
+                    <i data-lucide="zap" class="w-4 h-4"></i>
+                    3. 페이지 편집 단축키
+                </h2>
+                <div class="bg-blue-50/50 dark:bg-blue-900/10 rounded-xl border border-blue-100 dark:border-blue-900/30 overflow-hidden">
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-4 border-b border-blue-100 dark:border-blue-900/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                        <span class="font-medium text-blue-900 dark:text-blue-300">새 페이지 만들기</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">N</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-4 border-b border-blue-100 dark:border-blue-900/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+                        <span class="font-medium text-blue-900 dark:text-blue-300">새 탭 열기</span>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">T</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-4 border-b border-blue-100 dark:border-blue-900/30 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors flex-wrap gap-2">
+                        <div>
+                            <span class="font-medium text-blue-900 dark:text-blue-300">다크/라이트모드 전환</span>
+                            <span class="block text-xs text-blue-500 dark:text-blue-400 mt-0.5">밤에 눈이 피로할 때 최고예요! 👀</span>
+                        </div>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Shift</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">L</kbd>
+                        </div>
+                    </div>
+                    <!-- Item -->
+                    <div class="flex justify-between items-center p-4 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors flex-wrap gap-2">
+                        <div>
+                            <span class="font-medium text-blue-900 dark:text-blue-300">블록 위/아래로 이동</span>
+                            <span class="block text-xs text-blue-500 dark:text-blue-400 mt-0.5">마우스 드래그보다 훨씬 정확하고 편합니다</span>
+                        </div>
+                        <div class="flex gap-1.5">
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Ctrl/Cmd</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">Shift</kbd>
+                            <span class="text-blue-300 dark:text-blue-700 self-center">+</span>
+                            <kbd class="kbd-key px-2 py-1 bg-white dark:bg-gray-800 border border-blue-200 dark:border-blue-800 rounded-md text-sm font-mono">방향키(↑/↓)</kbd>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        
+        <!-- Footer -->
+        <div class="p-4 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-400 dark:text-gray-500 bg-gray-50 dark:bg-[#191919]">
+            💡 팁: 이 위젯을 복사하여 노션 페이지에 <strong>/embed</strong> 명령어로 붙여넣어 사용하세요.
+        </div>
+    </div>
+
+    <script>
+        // 아이콘 초기화
+        lucide.createIcons();
+
+        // 테마 토글 로직
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        
+        // 초기 테마 설정 (시스템 설정 또는 로컬 스토리지 확인)
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+
+        // 버튼 클릭 시 테마 전환
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            
+            // 로컬 스토리지에 상태 저장
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+
+        // 사용자가 실제로 노션 단축키(Ctrl+Shift+L)를 눌렀을 때도 다크모드가 전환되도록 추가
+        document.addEventListener('keydown', (e) => {
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && (e.key === 'l' || e.key === 'L')) {
+                e.preventDefault(); // 기본 브라우저 동작 방지
+                themeToggleBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
